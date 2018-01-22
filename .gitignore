@@ -1,0 +1,18 @@
+# OS and Editor files
+._*
+.DS_Store
+Thumbs.db
+.idea
+.project
+.settings
+.tmproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+
+# Composer
+vendor
+composer.lock
+
+# Test
+phpunit.xml
