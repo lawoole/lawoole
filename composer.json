@@ -6,7 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.0",
-        "lawoole/framework": "dev-master",
+        "lawoole/framework": "0.1.*",
         "illuminate/view": "5.5.*"
     },
     "require-dev": {
