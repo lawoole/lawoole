@@ -6,6 +6,8 @@
 |--------------------------------------------------------------------------
 */
 
-$router->get('/', [
-    'uses' => 'HomeController@index'
+$router->get('', 'HomeController@index');
+
+$router->get('task', [
+    'uses' => 'HomeController@asyncTask'
 ]);

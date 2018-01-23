@@ -23,11 +23,19 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
-| 执行 Server 处理
+| 注册服务提供者
 |--------------------------------------------------------------------------
 */
 
-$kernel = $app->make(Lawoole\Contracts\Server\Kernel::class);
+$app->register(Lawoole\Server\ServerServiceProvider::class);
+
+/*
+|--------------------------------------------------------------------------
+| 执行 Console 处理
+|--------------------------------------------------------------------------
+*/
+
+$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 
 $status = $kernel->handle(
     $input = new Symfony\Component\Console\Input\ArgvInput,

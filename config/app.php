@@ -32,7 +32,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'locale' => 'zh_cn',
+    'locale' => 'zh-CN',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'fallback_locale' => 'zh_cn',
+    'fallback_locale' => 'zh-CN',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,9 +64,7 @@ return [
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        Lawoole\Providers\ConsoleServiceProvider::class,
         Lawoole\Providers\RouteServiceProvider::class,
-        Lawoole\Providers\ScheduleServiceProvider::class,
         Lawoole\Routing\RoutingServiceProvider::class,
     ]
 
