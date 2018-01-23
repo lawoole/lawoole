@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+define('ARTISAN_BINARY', 'server');
+
 define('LAWOOLE_START', microtime(true));
 
 /*
@@ -25,7 +27,7 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 |--------------------------------------------------------------------------
 */
 
-$kernel = $app->make(Lawoole\Server\Kernel::class);
+$kernel = $app->make(Lawoole\Contracts\Server\Kernel::class);
 
 $status = $kernel->handle(
     $input = new Symfony\Component\Console\Input\ArgvInput,
