@@ -1,9 +1,8 @@
 <?php
 namespace App\Tasks;
 
-use Illuminate\Support\Facades\Log;
 use Lawoole\Application;
-use Lawoole\Task\BindRequestManager;
+use Lawoole\Routing\BindRequestManager;
 use Lawoole\Task\Task;
 
 class CalculateTask extends Task

@@ -5,11 +5,6 @@ use App\Tasks\CalculateTask;
 use Lawoole\Routing\Controller;
 use Lawoole\Routing\RequestManager;
 
-/**
- * Class HomeController
- *
- * @author You Ming
- */
 class HomeController extends Controller
 {
     /**
