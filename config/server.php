@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | 服务事件处理器
@@ -56,5 +55,4 @@ return [
     'exception' => [
         'handler' => Lawoole\Server\ServerExceptionHandler::class
     ]
-
 ];

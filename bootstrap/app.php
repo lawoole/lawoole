@@ -7,7 +7,7 @@
 */
 
 $app = new Lawoole\Application(
-    realpath(__DIR__ . '/../')
+    realpath(__DIR__.'/../')
 );
 
 /*
