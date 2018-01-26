@@ -8,6 +8,6 @@ return [
     */
 
     'commands' => [
-
+        App\Console\Commands\ServerStatusCommand::class
     ]
 ];

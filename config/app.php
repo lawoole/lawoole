@@ -63,7 +63,10 @@ return [
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
+        Lawoole\Providers\ConsoleServiceProvider::class,
         Lawoole\Providers\RouteServiceProvider::class,
         Lawoole\Routing\RoutingServiceProvider::class,
+        Lawoole\Server\ServerServiceProvider::class,
     ]
 ];
