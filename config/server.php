@@ -17,7 +17,8 @@ return [
 
     'options' => [
 
-        'task_worker_num' => 4
+        'log_level'       => 0,
+        'task_worker_num' => 4,
 
     ],
 

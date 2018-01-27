@@ -61,6 +61,7 @@ return [
         Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
+        Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
         Lawoole\Providers\ConsoleServiceProvider::class,
