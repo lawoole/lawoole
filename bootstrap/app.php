@@ -27,11 +27,6 @@ $app = new Lawoole\Application(
 // );
 //
 // $app->singleton(
-//     Lawoole\Contracts\Server\Kernel::class,
-//     App\Server\Kernel::class
-// );
-//
-// $app->singleton(
 //     Illuminate\Contracts\Debug\ExceptionHandler::class,
 //     App\Exceptions\Handler::class
 // );
