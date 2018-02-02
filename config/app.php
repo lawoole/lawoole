@@ -64,7 +64,6 @@ return [
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        Lawoole\Homer\HomerServiceProvider::class,
         Lawoole\Providers\ConsoleServiceProvider::class,
         Lawoole\Providers\RouteServiceProvider::class,
         Lawoole\Routing\RoutingServiceProvider::class,
