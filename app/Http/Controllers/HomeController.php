@@ -2,9 +2,12 @@
 namespace App\Http\Controllers;
 
 use App\Tasks\CalculateTask;
+use App\Tasks\CalculateTimeoutTask;
 use Lawoole\Application;
 use Lawoole\Routing\Controller;
+use Lawoole\Routing\FutureResponse;
 use Lawoole\Routing\RequestManager;
+use Lawoole\Support\Facades\Server;
 
 class HomeController extends Controller
 {
@@ -32,7 +35,34 @@ class HomeController extends Controller
         $addend = $request->get('addend', 1);
         $summand = $request->get('summand', 2);
 
-        return $this->pushTask(new CalculateTask($addend, $summand));
+        $task = new CalculateTask($addend, $summand);
+        $task->withRequestManager($requestManager);
+
+        Server::pushTask($task);
+
+        return new FutureResponse($requestManager);
+    }
+
+    /**
+     * 异步任务超时显示
+     *
+     * @param \Lawoole\Routing\RequestManager $requestManager
+     *
+     * @return mixed
+     */
+    public function asyncTaskTimeout(RequestManager $requestManager)
+    {
+        $request = $requestManager->getRequest();
+
+        $addend = $request->get('addend', 1);
+        $summand = $request->get('summand', 2);
+
+        $task = new CalculateTimeoutTask($addend, $summand);
+        $task->withRequestManager($requestManager);
+
+        Server::pushTask($task);
+
+        return new FutureResponse($requestManager, 1.0);
     }
 
     /**
