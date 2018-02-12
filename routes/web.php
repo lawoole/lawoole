@@ -15,3 +15,7 @@ $router->get('task', [
 $router->get('timeout', [
     'uses' => 'HomeController@asyncTaskTimeout'
 ]);
+
+$router->get('step', [
+    'uses' => 'HomeController@stepResponse'
+]);
