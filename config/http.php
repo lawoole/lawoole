@@ -24,6 +24,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | 控制器根命名空间
+    |--------------------------------------------------------------------------
+    */
+
+    'namespace' => 'App\Http\Controllers',
+
+    /*
+    |--------------------------------------------------------------------------
     | 路由规则文件
     |--------------------------------------------------------------------------
     */
@@ -31,14 +39,12 @@ return [
     'routes' => [
 
         'web' => [
-            'path'      => route_path('web.php'),
-            'namespace' => 'App\Http\Controllers'
+            'path' => route_path('web.php'),
         ],
 
         'api' => [
             'path'       => route_path('api.php'),
             'prefix'     => 'api',
-            'namespace'  => 'App\Http\Controllers',
             'middleware' => [
                 Lawoole\Foundation\Http\Middleware\ParseJsonRequest::class
             ]
