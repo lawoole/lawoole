@@ -1,6 +1,7 @@
 <?php
 
 return [
+
    /*
    |--------------------------------------------------------------------------
    | 调试模式
@@ -71,4 +72,5 @@ return [
         Lawoole\Routing\RoutingServiceProvider::class,
         Lawoole\Server\ServerServiceProvider::class,
     ]
+
 ];
