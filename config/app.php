@@ -62,14 +62,14 @@ return [
         Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
+        Illuminate\Routing\RoutingServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
         Laravel\Tinker\TinkerServiceProvider::class,
 
-        Lawoole\Providers\ConsoleServiceProvider::class,
-        Lawoole\Providers\RouteServiceProvider::class,
-        Lawoole\Routing\RoutingServiceProvider::class,
+        Lawoole\Foundation\Providers\ConsoleServiceProvider::class,
+        Lawoole\Foundation\Providers\RouteServiceProvider::class,
         Lawoole\Server\ServerServiceProvider::class,
     ]
 
