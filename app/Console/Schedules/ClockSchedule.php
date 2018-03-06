@@ -24,6 +24,6 @@ class ClockSchedule extends Command
      */
     public function handle()
     {
-        
+        //
     }
 }
