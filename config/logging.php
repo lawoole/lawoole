@@ -36,6 +36,13 @@ return [
             'days'   => 7,
         ],
 
+        'homer' => [
+            'driver' => 'daily',
+            'path'   => storage_path('logs/homer.log'),
+            'level'  => 'debug',
+            'days'   => 7,
+        ],
+
         'slack' => [
             'driver'   => 'slack',
             'url'      => 'http://webhook/',
