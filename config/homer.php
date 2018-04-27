@@ -11,7 +11,7 @@ return [
     'services' => [
         [
             'interface' => \App\Services\Contracts\Ping::class,
-            'refer' => \App\Services\Ping::class
+            'refer'     => \App\Services\Ping::class
         ]
     ],
 
@@ -34,7 +34,7 @@ return [
     'references' => [
         [
             'interface' => \App\Services\Contracts\Ping::class,
-            'url' => 'whisper://127.0.0.1:8081'
+            'url'       => 'whisper://127.0.0.1:8081'
         ]
     ],
 
