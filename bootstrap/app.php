@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 */
 
-$app = new Lawoole\Application(
+$app = new Lawoole\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
