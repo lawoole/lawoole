@@ -70,10 +70,8 @@ return [
 
         Laravel\Tinker\TinkerServiceProvider::class,
 
-        Lawoole\Foundation\Providers\ConsoleServiceProvider::class,
-        Lawoole\Foundation\Providers\RouteServiceProvider::class,
-        Lawoole\Server\ServerServiceProvider::class,
-        Lawoole\Homer\HomerServiceProvider::class
+        Lawoole\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Lawoole\Foundation\Support\Providers\RouteServiceProvider::class,
     ]
 
 ];
