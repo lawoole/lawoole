@@ -2,8 +2,12 @@
 
 /*
 |--------------------------------------------------------------------------
-| 创建应用服务容器对象实例
+| Create The Application
 |--------------------------------------------------------------------------
+|
+| The first thing we will do is create a new Lawoole application instance,
+| it's the IoC container for the system binding all of the various parts.
+|
 */
 
 $app = new Lawoole\Foundation\Application(
@@ -12,8 +16,12 @@ $app = new Lawoole\Foundation\Application(
 
 /*
 |--------------------------------------------------------------------------
-| 绑定关键实体
+| Bind Important Interfaces
 |--------------------------------------------------------------------------
+|
+| Next, we need to bind some important interfaces into the container so
+| we will be able to resolve them when needed.
+|
 */
 
 $app->singleton(
@@ -28,8 +36,13 @@ $app->singleton(
 
 /*
 |--------------------------------------------------------------------------
-| 返回应用对象实例
+| Return The Application
 |--------------------------------------------------------------------------
+|
+| This script returns the application instance. The instance is given to
+| the calling script so we can separate the building of the instances
+| from the actual running of the application and sending responses.
+|
 */
 
 return $app;
