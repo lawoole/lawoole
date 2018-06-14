@@ -4,10 +4,13 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| 路由规则
+| Web Routes
 |--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider automatically. Now create
+| something great!
+|
 */
 
-Route::get('', 'HomeController@index');
-
-Route::get('homer', 'HomeController@homer');
+Route::get('/', 'HomeController@welcome');

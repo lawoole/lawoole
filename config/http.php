@@ -4,8 +4,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 中间件定义
+    | Global Middleware
     |--------------------------------------------------------------------------
+    |
+    | The application's global HTTP middleware stack. These middleware are run
+    | during every HTTP request to your application.
+    |
     */
 
     'middleware' => [
@@ -14,8 +18,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 路由中间件定义
+    | Route Middleware
     |--------------------------------------------------------------------------
+    |
+    | The application's route middleware. These middleware may be assigned to
+    | groups or used individually.
+    |
     */
 
     'route_middleware' => [
@@ -24,7 +32,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 路由组定义
+    | Route Middleware Groups
     |--------------------------------------------------------------------------
     */
 
@@ -34,7 +42,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 控制器根命名空间
+    | Root Controller Namespace
     |--------------------------------------------------------------------------
     */
 
@@ -42,7 +50,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 路由规则文件
+    | Route Rules
     |--------------------------------------------------------------------------
     */
 
@@ -55,9 +63,7 @@ return [
         'api' => [
             'path'       => route_path('api.php'),
             'prefix'     => 'api',
-            'middleware' => [
-                Lawoole\Foundation\Http\Middleware\ParseJsonRequest::class
-            ]
+            'middleware' => []
         ],
 
     ]

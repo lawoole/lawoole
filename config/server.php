@@ -4,23 +4,26 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 服务驱动类型
+    | Server Driver
     |--------------------------------------------------------------------------
+    |
+    | Available Drivers: "tcp", "http", "web_socket"
+    |
     */
 
     'driver' => 'http',
 
     /*
     |--------------------------------------------------------------------------
-    | 服务选项
+    | Unix Sock File
     |--------------------------------------------------------------------------
     */
 
-    'unix_sock' => '/tmp/lawoole.sock',
+    'unix_sock' => storage_path('framework/server.sock'),
 
     /*
     |--------------------------------------------------------------------------
-    | 服务选项
+    | Server Options
     |--------------------------------------------------------------------------
     */
 
@@ -72,7 +75,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | 监听配置
+    | Port Listens
     |--------------------------------------------------------------------------
     */
 
@@ -83,18 +86,18 @@ return [
             'port'     => 8080,
             'handler'  => Lawoole\Http\HttpServerSocketHandler::class,
         ],
-        [
-            'protocol' => 'whisper',
-            'host'     => '0.0.0.0',
-            'port'     => 8081,
-            'handler'  => Lawoole\Homer\Transport\Whisper\WhisperServerSocketHandler::class,
-        ],
-        [
-            'protocol' => 'http',
-            'host'     => '0.0.0.0',
-            'port'     => 8082,
-            'handler'  => Lawoole\Homer\Transport\Http\HttpServerSocketHandler::class,
-        ]
+        // [
+        //     'protocol' => 'whisper',
+        //     'host'     => '0.0.0.0',
+        //     'port'     => 8081,
+        //     'handler'  => Lawoole\Homer\Transport\Whisper\WhisperServerSocketHandler::class,
+        // ],
+        // [
+        //     'protocol' => 'http',
+        //     'host'     => '0.0.0.0',
+        //     'port'     => 8082,
+        //     'handler'  => Lawoole\Homer\Transport\Http\HttpServerSocketHandler::class,
+        // ]
     ],
 
 ];
