@@ -7,3 +7,5 @@ events.scanned.php
 routes.scanned.php
 down.lock
 server.runtime
+server.sock
+server-*.sock

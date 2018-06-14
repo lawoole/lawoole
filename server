@@ -30,7 +30,11 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 |
 */
 
-$input = new Symfony\Component\Console\Input\ArgvInput;
+$input = new Symfony\Component\Console\Input\ArgvInput(
+    isset($_SERVER['argv'][1]) && $_SERVER['argv'][1][0] != '-'
+        ? array_merge([$_SERVER['argv'][0], 'server:'.$_SERVER['argv'][1]], array_slice($_SERVER['argv'], 2))
+        : array_merge([$_SERVER['argv'][0], 'server:start'], array_slice($_SERVER['argv'], 1))
+);
 
 /*
 |--------------------------------------------------------------------------
@@ -45,9 +49,8 @@ $input = new Symfony\Component\Console\Input\ArgvInput;
 
 $kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
 
-$status = $kernel->call(
-    'server', $input->getArguments(),
-    new Symfony\Component\Console\Output\ConsoleOutput
+$status = $kernel->handle(
+    $input, new Symfony\Component\Console\Output\ConsoleOutput
 );
 
 /*
