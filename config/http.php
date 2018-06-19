@@ -34,6 +34,9 @@ return [
     |--------------------------------------------------------------------------
     | Route Middleware Groups
     |--------------------------------------------------------------------------
+    |
+    | The application's route middleware groups.
+    |
     */
 
     'middleware_groups' => [
@@ -44,6 +47,11 @@ return [
     |--------------------------------------------------------------------------
     | Root Controller Namespace
     |--------------------------------------------------------------------------
+    |
+    | The class or namespace we define in the route will be based on the root
+    | controller namespace. This configuration can help us to define routes
+    | more simply and clearly.
+    |
     */
 
     'namespace' => 'App\Http\Controllers',
@@ -52,6 +60,10 @@ return [
     |--------------------------------------------------------------------------
     | Route Rules
     |--------------------------------------------------------------------------
+    |
+    | Here we can provide multiple route definitions. Usually we will use
+    | route files to define routes, and here we just give their path.
+    |
     */
 
     'routes' => [

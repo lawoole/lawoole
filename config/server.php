@@ -7,6 +7,9 @@ return [
     | Server Driver
     |--------------------------------------------------------------------------
     |
+    | Swoole provides us rich types of web server implementation, we can choose
+    | one of them as the base driver of the server.
+    |
     | Available Drivers: "tcp", "http", "web_socket"
     |
     */
@@ -17,6 +20,10 @@ return [
     |--------------------------------------------------------------------------
     | Unix Sock File
     |--------------------------------------------------------------------------
+    |
+    | By default, the server will create a unix sock file and listen to it,
+    | we can use this file to control the server.
+    |
     */
 
     'unix_sock' => storage_path('framework/server.sock'),
@@ -25,6 +32,11 @@ return [
     |--------------------------------------------------------------------------
     | Server Options
     |--------------------------------------------------------------------------
+    |
+    | The configurations of the Swoole server.
+    |
+    | See https://www.swoole.co.uk/docs/modules/swoole-server/configuration
+    |
     */
 
     'options' => [
@@ -41,19 +53,13 @@ return [
 
         /*
         |--------------------------------------------------------------------------
-        | 日志记录
+        | Event Logs And Slow Logs
         |--------------------------------------------------------------------------
         */
 
         'log_level' => 2,
 
         'log_file' => storage_path('logs/swoole.log'),
-
-        /*
-        |--------------------------------------------------------------------------
-        | 慢日志记录
-        |--------------------------------------------------------------------------
-        */
 
         'request_slowlog_timeout' => 5,
 
@@ -63,7 +69,7 @@ return [
 
         /*
         |--------------------------------------------------------------------------
-        | 处理相关
+        | Request Handler
         |--------------------------------------------------------------------------
         */
 
@@ -77,6 +83,12 @@ return [
     |--------------------------------------------------------------------------
     | Port Listens
     |--------------------------------------------------------------------------
+    |
+    | We can listen on multiple ports at the same time via the Swoole server,
+    | they can use different protocols. We can use different event handlers to
+    | handle the events they generate. For example, we can handle Http requests
+    | and Homer callings in the same server.
+    |
     */
 
     'listens' => [
@@ -86,18 +98,18 @@ return [
             'port'     => 8080,
             'handler'  => Lawoole\Http\HttpServerSocketHandler::class,
         ],
-        // [
-        //     'protocol' => 'whisper',
-        //     'host'     => '0.0.0.0',
-        //     'port'     => 8081,
-        //     'handler'  => Lawoole\Homer\Transport\Whisper\WhisperServerSocketHandler::class,
-        // ],
-        // [
-        //     'protocol' => 'http',
-        //     'host'     => '0.0.0.0',
-        //     'port'     => 8082,
-        //     'handler'  => Lawoole\Homer\Transport\Http\HttpServerSocketHandler::class,
-        // ]
+        [
+            'protocol' => 'whisper',
+            'host'     => '0.0.0.0',
+            'port'     => 8081,
+            'handler'  => Lawoole\Homer\Transport\Whisper\WhisperServerSocketHandler::class,
+        ],
+        [
+            'protocol' => 'http',
+            'host'     => '0.0.0.0',
+            'port'     => 8082,
+            'handler'  => Lawoole\Homer\Transport\Http\HttpServerSocketHandler::class,
+        ]
     ],
 
 ];

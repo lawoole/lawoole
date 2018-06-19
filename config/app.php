@@ -135,6 +135,7 @@ return [
         Lawoole\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Lawoole\Foundation\Support\Providers\RouteServiceProvider::class,
         Lawoole\Server\ServerServiceProvider::class,
+        Lawoole\Homer\HomerServiceProvider::class,
 
     ],
 
