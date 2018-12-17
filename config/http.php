@@ -72,12 +72,6 @@ return [
             'path' => route_path('web.php'),
         ],
 
-        'api' => [
-            'path'       => route_path('api.php'),
-            'prefix'     => 'api',
-            'middleware' => []
-        ],
-
     ]
 
 ];

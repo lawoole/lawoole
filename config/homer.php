@@ -4,6 +4,47 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Global Middleware
+    |--------------------------------------------------------------------------
+    |
+    | The application's global Homer middleware stack. These middleware are run
+    | during every Homer invocation to your application.
+    |
+    */
+
+    'middleware' => [
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Name Middleware
+    |--------------------------------------------------------------------------
+    |
+    | The application's name middleware. These middleware may be assigned to
+    | groups or used individually.
+    |
+    */
+
+    'name_middleware' => [
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Name Middleware Groups
+    |--------------------------------------------------------------------------
+    |
+    | The application's name middleware groups.
+    |
+    */
+
+    'middleware_groups' => [
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Service Exports
     |--------------------------------------------------------------------------
     |
@@ -16,9 +57,12 @@ return [
 
     'services' => [
         [
-            'interface' => App\Services\EchoServiceInterface::class,
-            'refer'     => App\Services\EchoService::class
-        ]
+            'interface'  => App\Services\EchoServiceInterface::class,
+            'refer'      => App\Services\EchoService::class,
+            'middleware' => [
+                //
+            ],
+        ],
     ],
 
     /*
@@ -33,6 +77,16 @@ return [
     */
 
     'clients' => [
+
+        'localhost' => [
+            'url'         => 'whisper://127.0.0.1:8081',
+            // 'url'      => 'http://127.0.0.1:8082',
+            'timeout'     => 5000,
+            'retry_times' => 1,
+            'middleware'  => [
+                //
+            ],
+        ],
 
     ],
 
@@ -50,8 +104,7 @@ return [
     'references' => [
         [
             'interface' => App\Services\EchoServiceInterface::class,
-            'url'       => 'whisper://127.0.0.1:8081',
-            // 'url'    => 'http://127.0.0.1:8082'
+            'client'    => 'localhost',
         ],
     ],
 

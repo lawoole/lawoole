@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'The Lawoole service',
+    'name' => 'The Lawoole',
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'environment' => 'production',
+    'env' => 'production',
 
     /*
     |--------------------------------------------------------------------------
@@ -121,21 +121,30 @@ return [
 
     'providers' => [
 
-        Illuminate\Cache\CacheServiceProvider::class,
-        Illuminate\Database\DatabaseServiceProvider::class,
-        Illuminate\Filesystem\FilesystemServiceProvider::class,
-        Illuminate\Queue\QueueServiceProvider::class,
-        Illuminate\Routing\RoutingServiceProvider::class,
-        Illuminate\Translation\TranslationServiceProvider::class,
-        Illuminate\Validation\ValidationServiceProvider::class,
-        Illuminate\View\ViewServiceProvider::class,
-
-        Laravel\Tinker\TinkerServiceProvider::class,
-
+        Lawoole\Auth\AuthServiceProvider::class,
+        Lawoole\Broadcasting\BroadcastServiceProvider::class,
+        Lawoole\Bus\BusServiceProvider::class,
+        Lawoole\Cache\CacheServiceProvider::class,
+        Lawoole\Cookie\CookieServiceProvider::class,
+        Lawoole\Database\DatabaseServiceProvider::class,
+        Lawoole\Encryption\EncryptionServiceProvider::class,
+        Lawoole\Filesystem\FilesystemServiceProvider::class,
         Lawoole\Foundation\Providers\ConsoleSupportServiceProvider::class,
-        Lawoole\Foundation\Support\Providers\RouteServiceProvider::class,
-        Lawoole\Server\ServerServiceProvider::class,
+        Lawoole\Hashing\HashServiceProvider::class,
         Lawoole\Homer\HomerServiceProvider::class,
+        Lawoole\Http\HttpServiceProvider::class,
+        Lawoole\Mail\MailServiceProvider::class,
+        Lawoole\Notifications\NotificationServiceProvider::class,
+        Lawoole\Pagination\PaginationServiceProvider::class,
+        Lawoole\Pipeline\PipelineServiceProvider::class,
+        Lawoole\Queue\QueueServiceProvider::class,
+        Lawoole\Redis\RedisServiceProvider::class,
+        Lawoole\Routing\RoutingServiceProvider::class,
+        Lawoole\Server\ServerServiceProvider::class,
+        Lawoole\Session\SessionServiceProvider::class,
+        Lawoole\Translation\TranslationServiceProvider::class,
+        Lawoole\Validation\ValidationServiceProvider::class,
+        Lawoole\View\ViewServiceProvider::class,
 
     ],
 
