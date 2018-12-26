@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@welcome');
+
+Route::get('/websocket', 'HomeController@websocket');

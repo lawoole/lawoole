@@ -10,11 +10,11 @@ return [
     | Swoole provides us rich types of web server implementation, we can choose
     | one of them as the base driver of the server.
     |
-    | Available Drivers: "tcp", "http", "web_socket"
+    | Available Drivers: "tcp", "http", "websocket"
     |
     */
 
-    'driver' => 'http',
+    'driver' => 'websocket',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,10 +93,10 @@ return [
 
     'listens' => [
         [
-            'protocol' => 'http',
+            'protocol' => 'websocket',
             'host'     => '0.0.0.0',
             'port'     => 8080,
-            'handler'  => Lawoole\Http\HttpServerSocketHandler::class,
+            'handler'  => Lawoole\Websocket\WebsocketServerSocketHandler::class,
         ],
         [
             'protocol' => 'whisper',
