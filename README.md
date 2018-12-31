@@ -25,6 +25,10 @@ Thank for the shoulders of giants:
 
 - QQ Group: 729916224
 
+## Documentation
+
+Here the [documentation](https://github.com/lawoole/docs/tree/1.0) of Lawoole . Of course, you can also find relevant knowledge about Lawoole from the Internet.
+
 ## License
 
 The Lawoole framework is open-sourced software licensed under the [MIT License](http://opensource.org/licenses/MIT).
