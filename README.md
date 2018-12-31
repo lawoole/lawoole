@@ -21,7 +21,7 @@ Thank for the shoulders of giants:
 - Laravel ( [https://laravel.com](https://laravel.com) )
 - Swoole ( [https://www.swoole.com](https://www.swoole.com) )
 
-## Chat Board
+## Community
 
 - QQ Group: 729916224
 
