@@ -21,6 +21,10 @@ Thank for the shoulders of giants:
 - Laravel ( [https://laravel.com](https://laravel.com) )
 - Swoole ( [https://www.swoole.com](https://www.swoole.com) )
 
+## Chat board
+
+- QQ Group: 729916224
+
 ## License
 
 The Lawoole framework is open-sourced software licensed under the [MIT License](http://opensource.org/licenses/MIT).
