@@ -96,7 +96,7 @@ return [
             'protocol' => 'websocket',
             'host'     => '0.0.0.0',
             'port'     => 8080,
-            'handler'  => Lawoole\Websocket\WebsocketServerSocketHandler::class,
+            'handler'  => Lawoole\WebSocket\WebSocketServerSocketHandler::class,
         ],
         [
             'protocol' => 'whisper',
