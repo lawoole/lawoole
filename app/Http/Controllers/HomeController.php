@@ -31,7 +31,7 @@ class HomeController extends Controller
     {
         return HandShakeResponse::accept($request, new class implements WebSocketHandler {
             /**
-             * Called when web socket connection is open.
+             * Called when websocket connection is open.
              *
              * @param \Lawoole\Contracts\WebSocket\Connection $connection
              * @param \Illuminate\Http\Request $request
@@ -42,7 +42,7 @@ class HomeController extends Controller
             }
 
             /**
-             * Called when received a web socket message.
+             * Called when received a websocket message.
              *
              * @param \Lawoole\Contracts\WebSocket\Connection $connection
              * @param bool $isBinary
@@ -54,7 +54,7 @@ class HomeController extends Controller
             }
 
             /**
-             * Called when web socket connection is closed.
+             * Called when websocket connection is closed.
              *
              * @param \Lawoole\Contracts\WebSocket\Connection $connection
              */
